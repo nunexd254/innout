@@ -22,7 +22,10 @@
         echo '<br>';
         echo 'Fim!';
         echo "<hr>";
-
+        //echo $user->getSelect();
+        echo User::getSelect(['id' => 1], 'name, email');
+        echo '<br>';
+        echo User::getSelect(['name' => 'Chaves', 'email' => 'chaves@cod3r.com.br']);
         //var_dump(Database::getConnection());
        
    
