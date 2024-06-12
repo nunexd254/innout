@@ -5,27 +5,19 @@
     require_once(dirname(__FILE__, 2) . '/src/models/User.php');
     //ini_set('display_errors',1);
         //Database::getConnection();
-        echo "<hr>";
-        $sql = "select * from users";
-        $result = Database::getResultFromQuery($sql);
-        
-        while($row = $result->fetch_assoc()){
-            print_r($row);
+ $user = new User(['name' => 'Lucas', 'email' => 'lucas@cod3r.com.br']);
+        //echo $user->getSelect();
+        //echo User::getSelect(['id' => 1], 'name, email');
+        echo '<br>';
+        print_r(User::get(['id'=>1],'name','email'));
+        echo '<br>';
+        echo '<br>';
+        echo '<br>';
+        foreach(User::get([],'name') as $user){
+            echo $user->name;
             echo '<br>';
         }
-        echo "<hr>";
-        $user = new User(['name'=>'Lucas','email'=>'lucas@gmail.com']);
-        print_r($user);
-        $user->email = 'lucas_alterado@gmail.com';
-        echo '<br>';
-        print_r($user->email);
-        echo '<br>';
-        echo 'Fim!';
-        echo "<hr>";
-        //echo $user->getSelect();
-        echo User::getSelect(['id' => 1], 'name, email');
-        echo '<br>';
-        echo User::getSelect(['name' => 'Chaves', 'email' => 'chaves@cod3r.com.br']);
+        //echo User::getSelect(['name' => 'Chaves', 'email' => 'chaves@cod3r.com.br']);
         //var_dump(Database::getConnection());
        
    
