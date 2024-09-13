@@ -11,6 +11,14 @@
     // }
 
     $user = new User(['name' => 'Lucas' , 'email' => 'lucas@cod3r.com.br']);
-    print_r($user);
-    $user->email = 'lucas_alterado.com.br';
-    print_r($user->email);
+    //echo $user->getSelect();
+    // echo User::getSelect(['id' => 1], 'name, email');
+    // echo '<br>';
+    // echo User::getSelect(['name' => 'Chaves']);
+    print_r(User::get(['id' => 1], 'name, email'));
+    echo '<br>';
+
+    foreach(User::get([], 'name') as $user) {
+        echo $user->name;
+        echo '<br>';
+    }
