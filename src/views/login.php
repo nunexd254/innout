@@ -25,11 +25,20 @@
                     <div class="form-group">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" value="<?= $email ?>" 
-                            class="form-control" placeholder="Informe o E-mail" autofocus>
+                            class="form-control <?= $errors->get['email'] ? 'is-invalid' : '' ?>"
+                            placeholder="Informe o E-mail" autofocus>
+                            <div class="invalid-feedback">
+                            <?= $errors->get['email'] ?>
+                            </div>
                     </div>
                     <div class="form-group">
                         <label for="password">Senha</label>
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Informe a senha">
+                        <input type="password" id="password" name="password"
+                         class="form-control <?= $errors->get['password'] ? 'is-invalid' : '' ?>"
+                          placeholder="Informe a senha">
+                          <div class="invalid-feedback">
+                            <?= $errors->get['password'] ?>
+                          </div>
                     </div>
 
                 </div>
