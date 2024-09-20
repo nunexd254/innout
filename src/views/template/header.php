@@ -22,4 +22,7 @@
             <div class="menu-toggle mx-3">
                 <i class="icofont-navigation-menu"></i>
             </div>
+            <div class="spacer">
+                
+            </div>
         </header>
