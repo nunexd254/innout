@@ -7,7 +7,19 @@
     print_r($user);
     echo '<br><br>';
     $user->email = 'douglas_alterado@gmail.com';
-    print_r($user->email);
+     echo '<br><br>';
+    print_r(User::get(['id'=>1], 'name, email'));
+    echo '<br><br>';
+    foreach(User::get([], 'name') as $user) {
+        echo $user->name;
+        echo '<br>';
+    }
+     // echo $user->getSelect();
+    // echo '<br><br>';
+    // echo User::getSelect(['id' => 1],'name,email');
+    // echo '<br><br>';
+    // echo User::getSelect(['name'=>'Chaves']);
+    //print_r($user->email);
     /*
     $sql = "select * from users";
 
