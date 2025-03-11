@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/icofont.min.css">
     <link rel="stylesheet" href="assets/css/template.css">
+    
     <title>In N' Out</title>
 </head>
 
@@ -39,7 +40,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            
+            </div>            
         </div>
     </header>
